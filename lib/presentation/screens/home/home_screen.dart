@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teste/config/colors.dart';
+import 'package:teste/core/constants/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
