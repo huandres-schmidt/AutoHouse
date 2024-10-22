@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:teste/core/constants/colors.dart';
+import 'package:teste/presentation/screens/home/widgets/home_view_lista_cliente.dart';
+import 'package:teste/presentation/screens/home/widgets/home_view_lista_manutencao.dart';
+import 'package:teste/presentation/screens/home/widgets/home_view_lista_mecanico.dart';
+import 'package:teste/presentation/screens/home/widgets/home_view_lista_veiculo.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,26 +24,16 @@ class HomeScreen extends StatelessWidget {
                 bottomRight: Radius.circular(52),
               ),
             ),
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   'Bem vindo a AutoHouse',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.w400,
-                  ),
-                ),
-                Container(
-                  width: 250,
-                  height: 40,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(12),
-                    ),
                   ),
                 ),
               ],
@@ -104,10 +98,13 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: IconButton(
-                      onPressed: () {},
-                      icon: Image.asset('assets/icones/icone_add_veiculo.png',
+                      onPressed: () {
+
+                      },
+                      icon: Image.asset(
+                        'assets/icones/icone_add_veiculo.png',
                         width: 70,
-                      )
+                      ),
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -124,9 +121,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: IconButton(
                       onPressed: () {},
-                      icon: Image.asset('assets/icones/icone_add_cliente.png',
+                      icon: Image.asset(
+                        'assets/icones/icone_add_cliente.png',
                         width: 70,
-                      )
+                      ),
                     ),
                   ),
                 ],
@@ -134,7 +132,9 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 8.0),
+            padding: const EdgeInsets.only(
+              top: 8.0,
+            ),
             child: Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.665,
@@ -144,6 +144,15 @@ class HomeScreen extends StatelessWidget {
                   topLeft: Radius.circular(52),
                   topRight: Radius.circular(52),
                 ),
+              ),
+              child: PageView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  HomeViewListaManutencao(),
+                  HomeViewListaMecanico(),
+                  HomeViewListaVeiculo(),
+                  HomeViewListaCliente(),
+                ],
               ),
             ),
           ),

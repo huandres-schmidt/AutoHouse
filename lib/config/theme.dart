@@ -5,6 +5,7 @@ import 'package:teste/core/constants/colors.dart';
 class AppTheme{
   static ThemeData themeData(){
     return ThemeData(
+      scaffoldBackgroundColor: ColorsContants.backgroundColor,
       iconTheme: const IconThemeData(
         color: Colors.white,
       ),

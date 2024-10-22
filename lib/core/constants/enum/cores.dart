@@ -1,9 +1,9 @@
-enum Cores {
+enum Cor {
   vermelho(value: 1, cor: 'Vermelho'),
   azul(value: 2, cor: 'Azul'),
   verde(value: 3, cor: 'Verde'),
   amarelo(value: 4, cor: 'Amarelo'),
-  Preto(value: 5, cor: 'Preto'),
+  preto(value: 5, cor: 'Preto'),
   prata(value: 6, cor: 'Prata'),
   branco(value: 7, cor: 'Branco'),
   cinza(value: 8, cor: 'Cinza'),
@@ -19,5 +19,5 @@ enum Cores {
   final int value;
   final String cor;
 
-  const Cores({required this.value, required this.cor});
+  const Cor({required this.value, required this.cor});
 }
