@@ -15,7 +15,12 @@ class HomeViewListaManutencao extends StatelessWidget {
             top: 15.0,
             bottom: 30.0,
           ),
-          child: Text('Lista Manutenções'),
+          child: Text(
+            'Lista Manutenções',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
         ),
         Padding(
           padding: EdgeInsets.only(
@@ -26,17 +31,18 @@ class HomeViewListaManutencao extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Teste',
+                    'Nome Reparo',
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    'Nome Cliente',
                     style: TextStyle(color: Colors.black),
                   ),
                   Text(
-                    'Teste',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Text(
-                    'Teste',
+                    'Nome Mecânico',
                     style: TextStyle(color: Colors.black),
                   ),
                 ],
@@ -58,17 +64,18 @@ class HomeViewListaManutencao extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Teste',
+                    'Nome Reparo',
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    'Nome Cliente',
                     style: TextStyle(color: Colors.black),
                   ),
                   Text(
-                    'Teste',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Text(
-                    'Teste',
+                    'Nome Mecânico',
                     style: TextStyle(color: Colors.black),
                   ),
                 ],

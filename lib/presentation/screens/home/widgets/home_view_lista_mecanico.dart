@@ -14,7 +14,12 @@ class HomeViewListaMecanico extends StatelessWidget {
             top: 15.0,
             bottom: 30.0,
           ),
-          child: Text('Lista Mecânicos'),
+          child: Text(
+            'Lista Mecânicos',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
         ),
         Padding(
           padding: EdgeInsets.only(
@@ -25,17 +30,18 @@ class HomeViewListaMecanico extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Teste',
+                    'Nome',
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    'CPF',
                     style: TextStyle(color: Colors.black),
                   ),
                   Text(
-                    'Teste',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Text(
-                    'Teste',
+                    'Função',
                     style: TextStyle(color: Colors.black),
                   ),
                 ],
@@ -57,17 +63,18 @@ class HomeViewListaMecanico extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Teste',
+                    'Nome',
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    'CPF',
                     style: TextStyle(color: Colors.black),
                   ),
                   Text(
-                    'Teste',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Text(
-                    'Teste',
+                    'Função',
                     style: TextStyle(color: Colors.black),
                   ),
                 ],

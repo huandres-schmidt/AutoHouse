@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:teste/core/constants/colors.dart';
+import 'package:teste/presentation/screens/adicionar_cliente/adicionar_cliente_screen.dart';
+import 'package:teste/presentation/screens/adicionar_manutencao/adicionar_manutencao_screen.dart';
+import 'package:teste/presentation/screens/adicionar_mecanico/adicionar_mecanico_screen.dart';
+import 'package:teste/presentation/screens/adicionar_veiculo/adicionar_veiculo_screen.dart';
 import 'package:teste/presentation/screens/home/widgets/home_view_lista_cliente.dart';
 import 'package:teste/presentation/screens/home/widgets/home_view_lista_manutencao.dart';
 import 'package:teste/presentation/screens/home/widgets/home_view_lista_mecanico.dart';
@@ -32,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                   'Bem vindo a AutoHouse',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: 28.0,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -58,7 +62,14 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AdicionarManutencaoScreen(),
+                          ),
+                        );
+                      },
                       icon: Image.asset(
                         'assets/icones/icone_add_manutencao.png',
                         width: 70,
@@ -78,7 +89,14 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AdicionarMecanicoScreen(),
+                          ),
+                        );
+                      },
                       icon: Image.asset(
                         'assets/icones/icone_add_mecanico.png',
                         width: 70,
@@ -99,7 +117,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: IconButton(
                       onPressed: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AdicionarVeiculoScreen(),
+                          ),
+                        );
                       },
                       icon: Image.asset(
                         'assets/icones/icone_add_veiculo.png',
@@ -120,7 +143,14 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AdicionarClienteScreen(),
+                          ),
+                        );
+                      },
                       icon: Image.asset(
                         'assets/icones/icone_add_cliente.png',
                         width: 70,
@@ -131,28 +161,28 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 8.0,
-            ),
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.665,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(52),
-                  topRight: Radius.circular(52),
-                ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 8.0,
               ),
-              child: PageView(
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  HomeViewListaManutencao(),
-                  HomeViewListaMecanico(),
-                  HomeViewListaVeiculo(),
-                  HomeViewListaCliente(),
-                ],
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(52),
+                    topRight: Radius.circular(52),
+                  ),
+                ),
+                child: PageView(
+                  scrollDirection: Axis.horizontal,
+                  children: const [
+                    HomeViewListaManutencao(),
+                    HomeViewListaMecanico(),
+                    HomeViewListaVeiculo(),
+                    HomeViewListaCliente(),
+                  ],
+                ),
               ),
             ),
           ),

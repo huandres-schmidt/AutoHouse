@@ -14,7 +14,12 @@ class HomeViewListaVeiculo extends StatelessWidget {
             top: 15.0,
             bottom: 30.0,
           ),
-          child: Text('Lista Veículos'),
+          child: Text(
+            'Lista Veículos',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
         ),
         Padding(
           padding: EdgeInsets.only(
@@ -25,17 +30,18 @@ class HomeViewListaVeiculo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Teste',
+                    'Nome',
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    'Dono',
                     style: TextStyle(color: Colors.black),
                   ),
                   Text(
-                    'Teste',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Text(
-                    'Teste',
+                    'Placa',
                     style: TextStyle(color: Colors.black),
                   ),
                 ],
@@ -57,17 +63,18 @@ class HomeViewListaVeiculo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Teste',
+                    'Nome',
+                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  Text(
+                    'Dono',
                     style: TextStyle(color: Colors.black),
                   ),
                   Text(
-                    'Teste',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Text(
-                    'Teste',
+                    'Placa',
                     style: TextStyle(color: Colors.black),
                   ),
                 ],
