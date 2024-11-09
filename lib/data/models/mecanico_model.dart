@@ -1,6 +1,6 @@
 import '../../core/constants/enum/funcao_mecanico.dart';
 
-class TecnicoMecanico {
+class Mecanico {
   int? id;
   String? nome;
   String? sobrenome;
@@ -10,7 +10,7 @@ class TecnicoMecanico {
   String? email;
   FuncaoMecanico? funcaoMecanico;
 
-  TecnicoMecanico({
+  Mecanico({
     required this.id,
     required this.nome,
     required this.sobrenome,
@@ -34,7 +34,7 @@ class TecnicoMecanico {
     return data;
   }
 
-  TecnicoMecanico.fromMap(Map<String, dynamic> json){
+  Mecanico.fromMap(Map<String, dynamic> json){
     id = json['id'];
     nome = json['nome'];
     sobrenome = json['sobrenome'];

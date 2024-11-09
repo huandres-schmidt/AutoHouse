@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:teste/config/theme.dart';
-import 'package:teste/presentation/screens/home/home_screen.dart';
+import 'package:teste/app.dart';
+import 'package:teste/injector.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  final Injector injector = await _initializeApp();
+  runApp(AutoHouseApp(injector: injector));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+Future<Injector> _initializeApp() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: AppTheme.themeData(),
-      home: const HomeScreen(),
-    );
-  }
+  final Injector injector = await InjectorImpl.initializeDependencies();
+  return injector;
 }

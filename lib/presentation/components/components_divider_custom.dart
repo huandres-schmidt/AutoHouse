@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/colors.dart';
 
-class DividerCustom extends StatelessWidget {
-  const DividerCustom({super.key});
+class ComponentsDividerCustom extends StatelessWidget {
+  const ComponentsDividerCustom({super.key});
 
   @override
   Widget build(BuildContext context) {

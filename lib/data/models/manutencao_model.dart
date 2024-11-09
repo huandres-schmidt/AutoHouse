@@ -1,5 +1,5 @@
 import 'package:teste/core/constants/enum/tipo_manutencao.dart';
-import 'package:teste/data/models/tecnico_mecanico_model.dart';
+import 'package:teste/data/models/mecanico_model.dart';
 import 'package:teste/data/models/veiculo_model.dart';
 
 class ManutencaoModel {
@@ -11,7 +11,7 @@ class ManutencaoModel {
   double? custoManutencao;
   int? quilometragem;
   String? garantia;
-  TecnicoMecanico? mecanico;
+  Mecanico? mecanico;
   VeiculoModel? veiculo;
 
   ManutencaoModel({
@@ -50,7 +50,7 @@ class ManutencaoModel {
     custoManutencao = json['custo_manutencao'];
     quilometragem = json['quilometragem'];
     garantia = json['garantia'];
-    mecanico = TecnicoMecanico.fromMap(json['mecanico']);
+    mecanico = Mecanico.fromMap(json['mecanico']);
     veiculo = VeiculoModel.fromMap(json['veiculo']);
   }
 

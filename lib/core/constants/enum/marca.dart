@@ -1,17 +1,17 @@
 enum Marca {
-  chevrolet(value: 1, url: 'https://www.chevrolet.com'),
-  ford(value: 2, url: 'https://www.ford.com'),
-  toyota(value: 3, url: 'https://www.toyota.com'),
-  honda(value: 4, url: 'https://www.honda.com'),
-  volkswagen(value: 5, url: 'https://www.volkswagen.com'),
-  bmw(value: 6, url: 'https://www.bmw.com'),
-  mercedes(value: 7, url: 'https://www.mercedes-benz.com'),
-  audi(value: 8, url: 'https://www.audi.com'),
-  nissan(value: 9, url: 'https://www.nissan.com'),
-  kia(value: 10, url: 'https://www.kia.com');
+  chevrolet(nome: 'Chevrolet', value: 1, assets: 'assets/marcas/chevrolet.png'),
+  ford(nome: 'Ford', value: 2, assets: 'assets/marcas/ford.png'),
+  toyota(nome: 'Toyota', value: 3, assets: 'assets/marcas/toyota.png'),
+  honda(nome: 'Honda', value: 4, assets: 'assets/marcas/honda.png'),
+  volkswagen(nome: 'Volkswagen', value: 5, assets: 'assets/marcas/volkswagen.png'),
+  bmw(nome: 'BMW', value: 6, assets: 'assets/marcas/bmw.png'),
+  mercedes(nome: 'Mercedes', value: 7, assets: 'assets/marcas/mercedes.png'),
+  audi(nome: 'Audi', value: 8, assets: 'assets/marcas/audi.png'),
+  nissan(nome: 'Nissan', value: 9, assets: 'assets/marcas/nissan.png');
 
+  final String nome;
   final int value;
-  final String url;
+  final String assets;
 
-  const Marca({required this.value, required this.url});
+  const Marca({required this.nome, required this.value, required this.assets});
 }

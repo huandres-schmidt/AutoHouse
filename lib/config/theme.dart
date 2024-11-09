@@ -11,9 +11,9 @@ class AppTheme {
         color: Colors.white,
       ),
       useMaterial3: false,
-      primaryColor: ColorsContants.corquenaoseionome,
+      primaryColor: ColorsContants.midnightDreams,
       appBarTheme: AppBarTheme(
-        color: ColorsContants.corquenaoseionome,
+        color: ColorsContants.midnightDreams,
         toolbarHeight: 0.0,
         elevation: 0.0,
         centerTitle: true,
@@ -22,7 +22,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(
-            ColorsContants.corquenaoseionome,
+            ColorsContants.midnightDreams,
           ),
           textStyle: WidgetStatePropertyAll(
             GoogleFonts.chakraPetch(

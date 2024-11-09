@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:teste/config/routes.dart';
 import 'package:teste/core/constants/colors.dart';
-import 'package:teste/presentation/screens/adicionar_cliente/adicionar_cliente_screen.dart';
 import 'package:teste/presentation/screens/adicionar_manutencao/adicionar_manutencao_screen.dart';
 import 'package:teste/presentation/screens/adicionar_mecanico/adicionar_mecanico_screen.dart';
 import 'package:teste/presentation/screens/adicionar_veiculo/adicionar_veiculo_screen.dart';
@@ -8,6 +8,8 @@ import 'package:teste/presentation/screens/home/widgets/home_view_lista_cliente.
 import 'package:teste/presentation/screens/home/widgets/home_view_lista_manutencao.dart';
 import 'package:teste/presentation/screens/home/widgets/home_view_lista_mecanico.dart';
 import 'package:teste/presentation/screens/home/widgets/home_view_lista_veiculo.dart';
+
+import '../adicionar_cliente/adicionar_cliente_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,25 +21,50 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 150,
+            height: 90,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              color: ColorsContants.corquenaoseionome,
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(52),
-                bottomRight: Radius.circular(52),
-              ),
+              color: ColorsContants.midnightDreams,
             ),
-            child: const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Bem vindo a AutoHouse',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28.0,
-                    fontWeight: FontWeight.w400,
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 25,
+                        child: IconButton(
+                          onPressed: () {
+                            ///Adicionar funcionalidade de logout e altera senha
+                          },
+                          icon: const Icon(
+                            Icons.person,
+                            color: Colors.white,
+                            size: 30,
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.all(4.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Nome Empresa',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                            ),
+                            Text(
+                              '###.###.###/####-##',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -54,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: ColorsContants.corquenaoseionome,
+                      color: ColorsContants.midnightDreams,
                       borderRadius: const BorderRadius.all(
                         Radius.circular(
                           12,
@@ -66,12 +93,13 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const AdicionarManutencaoScreen(),
+                            builder: (context) =>
+                                const AdicionarManutencaoScreen(),
                           ),
                         );
                       },
                       icon: Image.asset(
-                        'assets/icones/icone_add_manutencao.png',
+                        'assets/icones/icone_adicionar_manutencao.png',
                         width: 70,
                       ),
                     ),
@@ -81,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: ColorsContants.corquenaoseionome,
+                      color: ColorsContants.midnightDreams,
                       borderRadius: const BorderRadius.all(
                         Radius.circular(
                           12,
@@ -93,12 +121,13 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const AdicionarMecanicoScreen(),
+                            builder: (context) =>
+                                const AdicionarVeiculoScreen(),
                           ),
                         );
                       },
                       icon: Image.asset(
-                        'assets/icones/icone_add_mecanico.png',
+                        'assets/icones/icone_adicionar_veiculos.png',
                         width: 70,
                       ),
                     ),
@@ -108,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: ColorsContants.corquenaoseionome,
+                      color: ColorsContants.midnightDreams,
                       borderRadius: const BorderRadius.all(
                         Radius.circular(
                           12,
@@ -117,15 +146,12 @@ class HomeScreen extends StatelessWidget {
                     ),
                     child: IconButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const AdicionarVeiculoScreen(),
-                          ),
+                        Navigator.of(context).pushNamed(
+                          AppRoutes.adicionarCliente.route,
                         );
                       },
                       icon: Image.asset(
-                        'assets/icones/icone_add_veiculo.png',
+                        'assets/icones/icone_adicionar_cliente.png',
                         width: 70,
                       ),
                     ),
@@ -135,7 +161,7 @@ class HomeScreen extends StatelessWidget {
                     width: 100,
                     height: 100,
                     decoration: BoxDecoration(
-                      color: ColorsContants.corquenaoseionome,
+                      color: ColorsContants.midnightDreams,
                       borderRadius: const BorderRadius.all(
                         Radius.circular(
                           12,
@@ -147,13 +173,42 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const AdicionarClienteScreen(),
+                            builder: (context) =>
+                                const AdicionarVeiculoScreen(),
                           ),
                         );
                       },
                       icon: Image.asset(
-                        'assets/icones/icone_add_cliente.png',
+                        'assets/icones/icone_empresa_coletora.png',
                         width: 70,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: ColorsContants.midnightDreams,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          12,
+                        ),
+                      ),
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const AdicionarMecanicoScreen(),
+                          ),
+                        );
+                      },
+                      icon: Image.asset(
+                        'assets/icones/icone_adicionar_mecanico.png',
+                        width: 75,
                       ),
                     ),
                   ),

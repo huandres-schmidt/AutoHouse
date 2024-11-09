@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teste/presentation/components/divider_custom.dart';
+import 'package:teste/presentation/components/components_divider_custom.dart';
 
 class HomeViewListaManutencao extends StatelessWidget {
   const HomeViewListaManutencao({
@@ -54,7 +54,7 @@ class HomeViewListaManutencao extends StatelessWidget {
             ],
           ),
         ),
-        DividerCustom(),
+        ComponentsDividerCustom(),
         Padding(
           padding: EdgeInsets.only(
             left: 15.0,
@@ -87,7 +87,7 @@ class HomeViewListaManutencao extends StatelessWidget {
             ],
           ),
         ),
-        DividerCustom(),
+        ComponentsDividerCustom(),
       ],
     );
   }
