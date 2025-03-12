@@ -67,6 +67,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    # Logo
+     - assets/logo/logo_sem_cor_sem_fundo.png
+    # Icones
      - assets/icones/icone_adicionar_veiculos.png
      - assets/icones/icone_cadastro_empresa.png
      - assets/icones/logo_auto_house.png
@@ -74,6 +77,11 @@ flutter:
      - assets/icones/icone_adicionar_cliente.png
      - assets/icones/icone_adicionar_manutencao.png
      - assets/icones/icone_adicionar_mecanico.png
+     - assets/icones/icone_mecanico.png
+     - assets/icones/reciclavel.png
+     - assets/icones/reciclando.png
+     - assets/icones/icone_solicitar.png
+     # Icones Marcas
      - assets/marcas/volkswagen.png
      - assets/marcas/audi.png
      - assets/marcas/bmw.png

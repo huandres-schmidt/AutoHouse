@@ -6,15 +6,7 @@ import 'package:teste/presentation/screens/adicionar_cliente/bloc/adicionar_clie
 import 'adicionar_cliente_body.dart';
 
 class AdicionarClienteContent extends StatelessWidget {
-  AdicionarClienteContent({super.key});
-
-  final TextEditingController controllerNome = TextEditingController();
-  final TextEditingController controllerSobreNome = TextEditingController();
-  final TextEditingController controllerCpf = TextEditingController();
-  final TextEditingController controllerDataNascimento = TextEditingController();
-  final TextEditingController controllerTelefone = TextEditingController();
-  final TextEditingController controllerEmail = TextEditingController();
-
+  const AdicionarClienteContent({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,14 +18,7 @@ class AdicionarClienteContent extends StatelessWidget {
         listener: _listener,
         builder: (context, state) {
           if (state is AdicionarClienteLoaded) {
-            return AdicionarClienteBody(
-              controllerNome: controllerNome,
-              controllerSobrenome: controllerSobreNome,
-              controllerCpf: controllerCpf,
-              controllerDataNascimento: controllerDataNascimento,
-              controllerTelefone: controllerTelefone,
-              controllerEmail: controllerEmail,
-            );
+            return const AdicionarClienteBody();
           }
           return const ComponentsContainerErroDesconhecido();
         },

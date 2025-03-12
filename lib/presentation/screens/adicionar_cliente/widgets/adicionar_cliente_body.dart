@@ -4,25 +4,17 @@ import 'package:teste/presentation/components/components_text_form_field.dart';
 import '../../../components/components_mask_formatter.dart';
 
 class AdicionarClienteBody extends StatelessWidget {
-  const AdicionarClienteBody({
-    super.key,
-    required this.controllerNome,
-    required this.controllerSobrenome,
-    required this.controllerCpf,
-    required this.controllerDataNascimento,
-    required this.controllerTelefone,
-    required this.controllerEmail,
-  });
-
-  final TextEditingController controllerNome;
-  final TextEditingController controllerSobrenome;
-  final TextEditingController controllerCpf;
-  final TextEditingController controllerDataNascimento;
-  final TextEditingController controllerTelefone;
-  final TextEditingController controllerEmail;
+  const AdicionarClienteBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController controllerNome = TextEditingController();
+    final TextEditingController controllerSobreNome = TextEditingController();
+    final TextEditingController controllerCpf = TextEditingController();
+    final TextEditingController controllerDataNascimento = TextEditingController();
+    final TextEditingController controllerTelefone = TextEditingController();
+    final TextEditingController controllerEmail = TextEditingController();
+
     return Padding(
       padding: const EdgeInsets.all(30.0),
       child: Column(
@@ -36,7 +28,7 @@ class AdicionarClienteBody extends StatelessWidget {
           ComponentsTextFormField(
             maxLength: 35,
             labelText: 'Sobrenome',
-            controller: controllerSobrenome,
+            controller: controllerSobreNome,
           ),
           ComponentsTextFormField(
             maxLength: 14,

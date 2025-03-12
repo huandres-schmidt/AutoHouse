@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import '../../core/constants/colors.dart';
-import 'components_mask_formatter.dart';
 
 class ComponentsTextFormField extends StatelessWidget {
   const ComponentsTextFormField({

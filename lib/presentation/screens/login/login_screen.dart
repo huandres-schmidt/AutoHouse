@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:teste/config/routes.dart';
 import 'package:teste/core/constants/colors.dart';
 import 'package:teste/presentation/components/components_mask_formatter.dart';
+import 'package:teste/presentation/screens/menu/menu_screen.dart';
 
 import '../../components/components_logo_auto_house.dart';
+import '../home/bloc/home_bloc.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  const LoginScreen({
+    super.key,
+    required this.homeBloc,
+  });
+
+  final HomeBloc homeBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +84,14 @@ class LoginScreen extends StatelessWidget {
             ),
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.of(context).pushNamed(AppRoutes.home.route);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return MenuScreen(homeBloc: homeBloc);
+                    },
+                  ),
+                );
               },
               icon: const Icon(Icons.login),
               style: ButtonStyle(
@@ -87,14 +100,6 @@ class LoginScreen extends StatelessWidget {
               ),
               label: const Text(
                 'Entrar',
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(AppRoutes.cadastro.route);
-              },
-              child: const Text(
-                'Não possui cadastro? ',
               ),
             ),
           ],

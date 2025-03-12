@@ -20,7 +20,7 @@ class AdicionarClienteScreen extends StatelessWidget {
             const AdicionarClienteLoad(),
           );
       },
-      child: AdicionarClienteContent(),
+      child: const AdicionarClienteContent(),
     );
   }
 }
