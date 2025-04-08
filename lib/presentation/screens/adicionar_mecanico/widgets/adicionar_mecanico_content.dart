@@ -11,14 +11,11 @@ class AdicionarMecanicoContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cadastrar Mecânico'),
-        toolbarHeight: 80.0,
-      ),
+      appBar: AppBar(toolbarHeight: 0.0),
       body: BlocConsumer<AdicionarMecanicoBloc, AdicionarMecanicoState>(
         listener: _listener,
         builder: (context, state) {
-          if(state is AdicionarMecanicoLoaded) {
+          if (state is AdicionarMecanicoLoaded) {
             return const AdicionarMecanicoBody();
           }
           return const ComponentsContainerErroDesconhecido();
@@ -27,7 +24,5 @@ class AdicionarMecanicoContent extends StatelessWidget {
     );
   }
 
-  void _listener(BuildContext context, AdicionarMecanicoState state) {
-
-  }
+  void _listener(BuildContext context, AdicionarMecanicoState state) {}
 }
